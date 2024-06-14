@@ -14,7 +14,7 @@ SRCS = $(wildcard ./*.cpp)
 OBJS = $(patsubst ./%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 
 # Libraries
-LIBS = -L$(LIBDIR) -lgame -lmodels -llib
+LIBS = -L$(LIBDIR) -lgame -lmodels -llib -lSDL2
 
 INCDIR = ./tetris/game/inc
 

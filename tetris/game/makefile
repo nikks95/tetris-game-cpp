@@ -11,18 +11,21 @@ TARGET = $(LIBDIR)/libgame.a
 SRCS = $(wildcard src/*.cpp)
 OBJS = $(patsubst src/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 
+LIBS = -lSDL2
 #target
 all: $(TARGET)
+
+$(info OBJS is $(OBJS))
 
 # Build the static library
 $(TARGET) : $(OBJS)
 	@mkdir -p $(LIBDIR)
-	ar rcs $@ $<
+	ar rcs $@ $^
 
 # Compile source files into object files
 $(BUILDDIR)/%.o: src/%.cpp
 	@mkdir -p $(BUILDDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(LIBS)
 
 #clean up
 clean: 
