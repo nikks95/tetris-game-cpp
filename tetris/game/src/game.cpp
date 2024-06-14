@@ -1,6 +1,9 @@
 #include "../inc/game.h"
-#include <iostream>
+#include "../inc/window.h"
+
 
 void startGame(){
-    std::cout<<"HELLO\n";
+    window *w = new window(10,20,30);
+    w->initializeWindow("tetris");
+    delete w;
 }
