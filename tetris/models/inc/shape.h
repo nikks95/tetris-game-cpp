@@ -6,15 +6,15 @@
 class shape
 {
 private:
-    point position;
+    point *position;
     int type;
     int deg;
 public:
-    shape(int stype,point p,int degree);
+    shape(int stype,point *p,int degree);
     ~shape();
 };
 
-shape::shape(int stype,point p,int degree)
+shape::shape(int stype,point *p,int degree)
 {
     position = p;
     type = stype;

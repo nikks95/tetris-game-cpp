@@ -38,7 +38,7 @@ void point::setY(int p)
     y = p;
 }
 
-void point(int p1,int p2){
+void point::setXY(int p1,int p2){
     x = p1;
     y = p2;
 }

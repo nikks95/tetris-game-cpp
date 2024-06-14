@@ -41,7 +41,7 @@ $(BUILDDIR):
 # Clean up build files
 clean:
 	$(MAKE) -C tetris clean
-	rm -rf $(BUILDDIR) $(TARGET)
+	rm -rf $(BUILDDIR) $(TARGET) $(LIBDIR)
 
 # Phony targets
 .PHONY: all clean libs
